@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_js</title>
+    <noscript>
+        <link rel="stylesheet" href="./css/fallback.css">
+    </noscript>
+    <script>
+        document.documentElement.classList.add('js-enabled');
+    </script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="print">
+    <link rel="icon" href="./img/logo2.svg">
+    <style>
+                fieldset > legend{
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        details{
+            margin: 1rem;
+        }
+
+        fieldset{
+            margin: 1.2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+
+        div.form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        span{
+            font-size: 0.8rem;
+            color:white;
+        }
+
+        input[type="text"],input[type="email"],textarea {
+            padding: 3px;
+        }
+
+        output {
+            display: block;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        button, input[type="reset"] {
+            width: 25%;
+            margin: 0 12%;
+        }
+        .js-enabled .valid {
+        color: rgb(118, 252, 118);
+        }
+        .js-enabled .invalid {
+        color: rgb(247, 175, 175);
+        }
+        .js-enabled .wrong{
+            color: red;
+        }
+
+        .js-enabled .error {
+        width: 100%;
+        padding: 0;
+
+        font-size: 80%;
+        color: white;
+        background-color: rgb(199, 93, 93);
+        border-radius: 0 0 5px 5px;
+        box-sizing: border-box;
+        }
+
+        .js-enabled .error.active {
+        color: rgb(0, 0, 0);
+        opacity: 1;
+        animation: fadeOut 10s forwards;
+        }
+
+        @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+        }   
+    </style>
+</head>
+<body>
+
+    <form method="POST" action="https://httpbin.org/post" novalidate> <!-- novalidate -->
+        <fieldset>
+            <legend>Contact me</legend>
+            <div class="form-group">
+                <label for="fullname">Enter your full name : <span id="spandetailsname">(This field is required)</span></label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Sophie Desmoa" minlength="2" maxlength="100">
+                <output id="fullname-error"></output>
+                <output id="fullname-info"></output>
+            </div>
+        <br>
+            <div class="form-group">
+                <label for="mail">Email: <span id="spandetailsemail">(This field is required)</span></label>
+                <input type="email" id="mail" name="mail" required placeholder="sophie@example.com" minlength="8" maxlength="64">
+                <output id="mail-error"></output>
+                <output id="mail-info"></output>
+                <!-- Google only authorizes letters, numbers and "." when creating an email & between 3 and 60 character before the "@" -->
+            </div>
+        <br>
+            <div class="form-group">
+                <label for="comment">Comment: <span id="spandetailscomment">(This field is required)</span></label>
+                <textarea name="comment" id="comment" cols="20" rows="3" maxlength="150" required placeholder="Write me a comment !"></textarea>
+                <!-- <p id="char-count">Characters left : 150</p> -->
+                <output id="comment-error"></output>
+                <output id="comment-info">Characters left : 150</output>
+            </div>
+        <br>
+            
+            <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+            <input type="hidden" id="form-error" name="form-error">
+            <input type="reset" value="Reset">
+            <button type="submit">Send</button>
+            <output id="form-info"></output>
+        </fieldset>
+        </form>
+</body>
+<footer>
+    <p>This website has been made by <span id="smooth">Cyrian Crusson</span><br><br>
+        Contact me : <a href="mailto:cyrian.crusson@esme.fr">cyrian.crusson@esme.fr</a></p>
+        <br>
+        <button id="theme-button" class="theme-toggle"></button>
+        <p id="indication">The changing button theme is not available without JavaScript</p>
+        <br>
+        <img src="img/moon.jpeg" alt="moon" id="moon">
+        <img src="img/sun.jpeg" alt="sun" id="sun">
+    <script src="js/form.js"></script>
+    <script src="js/changetheme.js"></script>
+</footer>
+<br>
+</html>

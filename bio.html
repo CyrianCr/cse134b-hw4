@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bio</title>
+    <noscript>
+        <link rel="stylesheet" href="./css/fallback.css">
+    </noscript>
+    <script>
+        document.documentElement.classList.add('js-enabled');
+    </script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="print">
+    <link rel="icon" href="./img/logo2.svg">
+
+    <style>
+    @media screen {
+        
+        main{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+
+        aside table, aside td, aside tr, aside th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            width: 50%;
+            height: 50%;
+        }
+
+        aside th{
+            text-align: center;
+        }
+
+        caption {
+            padding: 5px;
+            caption-side: bottom;
+        }
+
+        #skilltab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside {
+            padding-left: 0.5rem;
+            box-shadow: inset 5px 0 5px -5px black;
+            margin: 0 1rem;
+        }
+        
+        figure {
+            display: flex;
+            flex-flow: column;
+            padding: 5px;
+            margin: auto;
+            width: 40%;
+            height: 40%;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+
+        }
+
+        figcaption {
+            background-color : #fff;
+            color: black;
+            text-align: center;
+            font-style: italic;
+            border-radius: 3px;
+        }
+
+        #Top-Left{
+            padding-left: 0.5rem;
+            text-align: center;
+            padding-top: 1.7rem;
+            padding-bottom: 1.7rem;
+        }
+
+        #Top-Left, aside{
+            flex: 1;
+        }
+
+        #Top-Left table{
+            margin: auto;
+            width: 60%;
+            height: 30%;
+            background-color: white;
+            color: darkgrey ;
+            border: darkgray 1px solid;
+            }
+
+        #Top-Left p{
+            text-align: justify;
+            padding: 5px;
+        }
+
+        #me1{
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+        }
+
+        #bottom{
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        aside a[href^="./"]{
+            border: 1px solid black;
+            padding: 0.2rem;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: darkgrey;
+        } 
+        aside a[href^="./"]:hover{
+                color: white;
+        }
+
+}
+    </style>
+</head>
+
+<body>
+    <br>
+    <header>
+        <nav>
+            <a href="./education.html">Education</a>
+            <a href="./experiences.html">Experiences</a>
+            <a href="./index.html">Home</a>
+            <a href="#top">Top</a>
+        </nav>
+        <!--<img id="logo" src="./img/logo2.svg" alt="logo">-->
+        </header>
+<main>
+<section id="Top-Left">
+<h1>Cyrian Crusson</h1>
+<figure>
+    <!--JPEG to WebP slightly reduced the size of it-->
+<img id="me1" src="./img/me1.webp" alt="photo of myself">
+<figcaption>Linkedin Profile Picture</figcaption>
+</figure>
+<table>
+<tr>
+    <td>Age</td>
+    <td>22</td>
+</tr>
+<tr>
+    <td>Education</td>
+    <td>4th year CSE</td>
+</tr>
+<tr>
+    <td>Occupation</td>
+    <td>UCSD Student</td>
+</tr>
+<tr>
+    <td>Location</td>
+    <td>San Diego</td>
+</tr>
+<tr>
+    <td>Origin</td>
+    <td>France</td>
+</tr>
+</table>
+<p><strong>Find me on <a href="https://www.linkedin.com/in/cyriancrusson/">linkedin</a></strong></p>
+</section>
+<aside>
+    <h1>About me</h1>
+    <section id="informations">
+        <p> I am an exchange student from France. I am a 4th year student at the engineering school ESME, in Paris & Bordeaux. <br>
+            I am majoring in Artificial Intelligence. Currently living in La Jolla in homestay. <br>
+            Creative and patient, I enjoy working independently and as part of a team, researching and learning to find solutions. </p>
+    <h2>Future Goals</h2>
+    <ol>
+        <li>Graduate and work as an artificial intelligence engineer</li>
+        <li>Travel around the world (See polar lights & South Korea)</li>
+        <li>Learn web development and computer security</li>
+    </ol>
+
+<br>
+<div id = skilltab>
+    <table>
+        <caption>Interests and skill developed</caption>
+        <colgroup>
+            <col class="interest">
+            <col class="skill">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Interests</th>
+                <th>Skill</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Travel</td>
+                <td>Creativity</td>
+            </tr>
+            <tr>
+                <td>Sports</td>
+                <td>Team work</td>
+            </tr>
+            <tr>
+                <td>IT</td>
+                <td>Autonomy</td>
+            </tr>
+            <tr>
+                <td>Piano</td>
+                <td>Rigor</td>
+            </tr>
+            <tr>
+                <td>Video Games</td>
+                <td>Organization</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <template id="addtotab">
+        <tr>
+          <td class="interest"></td>
+          <td class="skill"></td>
+        </tr>
+    </template>
+</div>
+<br>
+
+<a href="./education.html#skills"><em>Skills I have developed in depth</em></a>
+
+<br>
+<!-- <figure>
+    <picture>
+        <img src="./img/linkedin.png" alt="linkedin" />
+    </picture>
+<figcaption>Scan this QR Code</figcaption>
+</figure> -->
+</section>
+</aside>
+<div id="bottom">
+
+<nav>
+        <a href="./education.html">Education</a>
+        <a href="./experiences.html">Experiences</a>
+        <a href="./index.html">Home</a>
+        <a href="#top">Top</a>
+</nav>
+</div>
+</main>
+
+<br>
+<footer>
+    <p><i>This website has been made by <span id="smooth">Cyrian Crusson</span><br><br>
+        Contact me : <a href="mailto:cyrian.crusson@esme.fr">cyrian.crusson@esme.fr</a></i></p>
+        <br>
+        <button id="theme-button" class="theme-toggle"></button>
+        <p id="indication">The changing button theme is not available without JavaScript</p>
+    <br>
+    <img src="img/moon.jpeg" alt="moon" id="moon">
+    <img src="img/sun.jpeg" alt="sun" id="sun">
+    <!-- <script>
+        // function changetheme() {
+        //     let element = document.body;
+        //     element.style.backgroundColor = "black";
+        // }
+    </script> -->
+    <script src="js/changetheme.js"></script>
+    </footer>
+<br>
+</body>
+
+</html>

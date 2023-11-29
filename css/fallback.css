@@ -1,0 +1,15 @@
+#theme-button{
+    display: none !important;
+}
+
+#sun, #moon{
+    display:none !important;
+}
+
+#indication{
+    display: block;
+    background-color: black;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+}

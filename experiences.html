@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>experiences</title>
+    <noscript>
+        <link rel="stylesheet" href="./css/fallback.css">
+    </noscript>
+    <script>
+        document.documentElement.classList.add('js-enabled');
+    </script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="print">
+    <link rel="icon" href="./img/logo2.svg">
+
+<style>
+
+    #Projects {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: darkgray;
+        justify-content: space-between;
+    }
+    
+    article {
+        margin: 0.2rem;
+        background: lightgrey;
+        text-align: center;
+        flex: 1;
+        padding-bottom: 1rem;
+    }
+
+    h3+p{
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    article h3{
+        text-align: center;
+        background-color: rgb(227, 224, 255);
+    }  
+
+
+    article a{
+        border: 1px solid black;
+        padding: 0.5rem;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: grey;
+    }
+
+    .ProjectsPair{
+        display: flex;
+        flex-direction: column;
+        flex: 1;        
+    }
+</style>
+</head>
+
+<body>
+    <br>
+    <header>
+        <nav>
+            <a href="./bio.html">Bio</a>
+            <a href="./education.html">Education</a>
+            <a href="./index.html">Home</a>
+            <a href="#top">Top</a>
+        </nav>
+        <!--<img id="logo" src="./img/logo2.svg" alt="logo">-->
+    </header>
+<main>
+    <h1>Professional experiences</h1>
+    <div id="experiences">
+        <dl>
+            <dt>Product manager (R&D) - Internship, July 2022 at iD Systemes, <span class="Location">Bordeaux</span></dt>
+            <dd>Analysis and development of the graphical representation of a workload. (Getting started)</dd>
+            <dd>Creation of a graphical representation of the scheduling module to be integrated into the company's ERP system. (Optimization)</dd>
+            <dd>Graphic representation using Sage X3, HTML, CSS. (Perfecting)</dd>
+        </dl>
+        <dl>
+            <dt>Local support technician - Internship, July 2021 at DSDEN, <span class="Location">Bordeaux</span></dt>
+            <dd>Setting up a server for PC deployment</dd>
+            <dd>Network technician knowledge</dd>
+        </dl>
+    </div>
+
+    <h2>Projects</h2>
+<!--Here PNG to WebP reduced half of the size-->
+    <div id="Projects">
+        <div class="ProjectsPair">
+        <article id="Alarm">
+            <h3>Rolling alarm clock robot</h3>
+            <p>Creation of an automatic alarm clock using <strong>Arduino & 3D modeling</strong></p>
+            <picture>
+                <source media="(max-width: 750px)" srcset="./img/alarm.webp" width="250" height="125">
+                <img src="./img/alarm.webp" alt="Alarm image" width="600" height="300">
+            </picture>
+            </article>
+
+            <article id="Mineway">
+                <h3>Mineway Surfer</h3>
+                <p>Creation of a video game with <strong>Unity & Blender (with IOT)</strong></p>
+                <picture>
+                    <source media="(max-width: 750px)" srcset="./img/Mineway.webp" width="250" height="125">
+                    <img src="./img/Mineway.webp" alt="Mineway image"  width="600" height="300">
+                </picture>            
+                <br>
+                <br>
+    
+                <a href="./Mineway.pptx" download>Download the report here</a>
+            </article>
+        </div>
+        <div class="ProjectsPair">
+            <article id="SunCharger">
+                <h3>Solar charging station</h3>
+                <p>Creation of a solar charging station with <strong>Arduino & 3D modeling</strong></p>
+                <picture>
+                    <source media="(max-width: 750px)" srcset="./img/SunCharger.webp" width="250" height="125">
+                    <img src="./img/Suncharger.webp" alt="Suncharger image" width="600" height="300">
+                </picture>
+            </article>
+
+            <article id="Etheral">
+                <h3>Etheral Conquest, Journey to Redemption</h3>
+                <p>Creation of a video game with <strong>Godot & Blender (with IOT)</strong></p>
+                <picture>
+                    <source media="(max-width: 750px)" srcset="./img/Etheral.webp"  width="250" height="125">
+                    <img src="./img/Etheral.webp" alt="Etheral image"  width="600" height="300">
+                </picture>            
+                <br>
+                <br>
+                <a href="./Etheral.pdf" download>Download the report here</a>
+            </article>
+        </div>
+    </div>
+</main>
+<br>
+<nav>
+    <a href="./bio.html">Bio</a>
+    <a href="./education.html">Education</a>
+    <a href="./index.html">Home</a>
+    <a href="#top">Top</a>
+</nav>
+
+<br>
+<footer>
+    <p><i>This website has been made by <span id="smooth">Cyrian Crusson</span><br><br>
+        Contact me : <a href="mailto:cyrian.crusson@esme.fr">cyrian.crusson@esme.fr</a></i></p>
+        <br>
+        <button id="theme-button" class="theme-toggle"></button>
+        <p id="indication">The changing button theme is not available without JavaScript</p>
+    <br>
+    <img src="img/moon.jpeg" alt="moon" id="moon">
+    <img src="img/sun.jpeg" alt="sun" id="sun">
+    
+    <!-- <script>
+        // function changetheme() {
+        //     let element = document.body;
+        //     element.style.backgroundColor = "black";
+        // }
+    </script> -->
+    <script src="js/changetheme.js"></script>
+    </footer>
+    <br>
+</body>
+
+</html>
