@@ -4,12 +4,11 @@ const themechoisi = localStorage.getItem("themechoisi"); // Get the theme choice
 const def_light = window.matchMedia("(prefers-color-scheme: light)");
 
 function preftheme(preference) {
-  const body = document.body;
     if (themechoisi === "light" || (preference && preference.matches)) {
-      body.classList.add("light");
+      document.body.classList.add("light");
       themebtn.classList.add("light");
     } else {
-      body.classList.add("dark");
+      document.body.classList.add("dark");
       themebtn.classList.add("dark");
     }
   }
