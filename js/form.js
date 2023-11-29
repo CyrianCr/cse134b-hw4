@@ -25,6 +25,10 @@ let charCount = document.getElementById("comment-info");
 let form_errors= [];         // Form info reporting
 let errorform = document.getElementById("form-error");
 
+// add no validate to the form if js active
+
+form.setAttribute("novalidate", true);
+
 fullname.addEventListener("input", () => {
 const isnameValid = correctname.test(fullname.value);  // Validation input
 const hasError = notallowed.test(fullname.value);    // Masking

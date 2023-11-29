@@ -102,19 +102,19 @@
 </head>
 <body>
 
-    <form method="POST" action="https://httpbin.org/post" novalidate> <!-- novalidate -->
+    <form method="POST" action="https://httpbin.org/post">
         <fieldset>
             <legend>Contact me</legend>
             <div class="form-group">
                 <label for="fullname">Enter your full name : <span id="spandetailsname">(This field is required)</span></label>
-                <input type="text" id="fullname" name="fullname" required placeholder="Sophie Desmoa" minlength="2" maxlength="100">
+                <input type="text" id="fullname" name="fullname" required placeholder="Sophie Desmoa" minlength="2" maxlength="100" pattern="[A-Za-z \-]+" title="Don't use non-typical character">
                 <output id="fullname-error"></output>
                 <output id="fullname-info"></output>
             </div>
         <br>
             <div class="form-group">
                 <label for="mail">Email: <span id="spandetailsemail">(This field is required)</span></label>
-                <input type="email" id="mail" name="mail" required placeholder="sophie@example.com" minlength="8" maxlength="64">
+                <input type="email" id="mail" name="mail" required placeholder="sophie@example.com" minlength="8" maxlength="64" pattern="[a-z0-9.]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter a valid email address" >
                 <output id="mail-error"></output>
                 <output id="mail-info"></output>
                 <!-- Google only authorizes letters, numbers and "." when creating an email & between 3 and 60 character before the "@" -->

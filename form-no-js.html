@@ -51,7 +51,11 @@
         }  
 
         input:invalid {
-        box-shadow: 0 0 5px 1px red;
+        background-color: rgb(247, 175, 175);
+        }
+
+        input:valid {
+        background-color: rgb(182, 247, 182);
         }
 
         input:focus:invalid {
@@ -74,7 +78,7 @@
     <legend>Contact me</legend>
     <div>
         <label for="fullname">Enter your full name : <span>(This field is required)</span></label>
-        <input type="text" id="fullname" name="fullname" required placeholder="Sophie Desmoa" minlength="2" maxlength="100" pattern="[A-Za-z -]+" title="Don't use non-typical character">
+        <input type="text" id="fullname" name="fullname" required placeholder="Sophie Desmoa" minlength="2" maxlength="100" pattern="[A-Za-z \-]+" title="Don't use non-typical character">
         <output id="fullname-error"></output>
         <output id="fullname-info"></output>
     </div>
